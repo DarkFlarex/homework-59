@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import {MoviePost} from '../../type';
 import Posts from "../../components/Posts/Posts";
 import './PostsBlogMovie.css';
+import AddPostsForm from "../../components/AddPostsForm/AddPostsForm";
 
 const PostsBlogMovie: React.FC = () => {
     const [posts, setPosts] = useState<MoviePost[]>([
@@ -25,8 +26,13 @@ const PostsBlogMovie: React.FC = () => {
         });
     };
 
+    const createPost = (newPost:MoviePost) => {
+        setPosts(prevPosts => [...prevPosts, newPost ]);
+    };
+
     return (
         <>
+            <AddPostsForm onSubmit={createPost}/>
             <div className={"Movie-list"}>
                 {posts.map((post) => (
                     <Posts

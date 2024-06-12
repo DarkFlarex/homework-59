@@ -1,0 +1,18 @@
+.AddPostForm{
+    margin-top:15px;
+}
+
+.AddPostForm-input{
+    padding:10px 25px;
+    width:350px;
+    margin-right:25px;
+    background-color: #C1E8FF;
+    outline: none;
+    border-radius: 5px;
+}
+
+.AddPostForm-btn{
+    padding:10px 35px;
+    border-radius: 3px;
+
+}
