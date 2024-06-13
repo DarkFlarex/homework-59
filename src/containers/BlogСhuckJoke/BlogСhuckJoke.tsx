@@ -22,7 +22,7 @@ const BlogChuckJoke: React.FC = () => {
     }, []);
 
     return (
-        <div>
+        <div className="Main-chuck-joke">
             <h1>Chuck Norris Joke</h1>
             <div className="Chuck-jokes">
                 {jokeTexts.length === 0 ? (
