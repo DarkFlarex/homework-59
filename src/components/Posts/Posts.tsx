@@ -14,7 +14,6 @@ const Posts:React.FC<Props> = React.memo( ({
 }) => {
     console.log(`[Posts] render ${nameMovie}`);
     return (
-
         <span className="Movie-post">
             <input type="text" value={nameMovie} onChange={onChangeName}/>
             <button className={"button-movie-delete"} onClick={onRemove}>Удалить</button>

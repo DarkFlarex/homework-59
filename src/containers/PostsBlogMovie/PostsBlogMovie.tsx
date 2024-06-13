@@ -4,7 +4,7 @@ import Posts from "../../components/Posts/Posts";
 import './PostsBlogMovie.css';
 import AddPostsForm from "../../components/AddPostsForm/AddPostsForm";
 
-const PostsBlogMovie: React.FC = () => {
+const PostsBlogMovie = () => {
     const [posts, setPosts] = useState<MoviePost[]>([
         { id: '1', nameMovie: 'Movie name #1' },
         { id: '2', nameMovie: 'Movie name #2' },
@@ -34,6 +34,7 @@ const PostsBlogMovie: React.FC = () => {
         <>
             <AddPostsForm onSubmit={createPost}/>
             <div className={"Movie-list"}>
+                <h1>To Watch list:</h1>
                 {posts.map((post) => (
                     <Posts
                         key={post.id}
