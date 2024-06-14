@@ -18,23 +18,19 @@ const BlogChuckJoke: React.FC = () => {
     };
 
     useEffect(() => {
-        showNewJoke
+        showNewJoke();
     }, []);
 
     return (
         <div className="Main-chuck-joke">
             <h1>Chuck Norris Joke</h1>
             <div className="Chuck-jokes">
-                {jokeTexts.length === 0 ? (
-                    <span>Нажмите на кнопку чтобы получить шутку про Чака Нориса</span>
-                ) : (
-                    jokeTexts.map((jokeText) => (
+                {jokeTexts.map((jokeText) => (
                         <ChuckJoke
                             key={jokeText.id}
                             chuck={jokeText}
                         />
-                    ))
-                )}
+                ))}
             </div>
             <button onClick={showNewJoke} className="show-new-joke-button">
                 new Chuck joke
